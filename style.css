@@ -377,16 +377,21 @@ body{
 }
 
 .records{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  max-width: 420px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .record-wrap{
   width: 100%;
+}
+
+@media (max-width: 900px){
+  .records{
+    grid-template-columns: 1fr;
+  }
 }
 
 .record{
